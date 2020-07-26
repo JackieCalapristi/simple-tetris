@@ -6,6 +6,10 @@ export const useStage = (player, resetPlayer) => {
   const [rowsCleared, setRowsCleared] = useState(0)
 
   useEffect(() => {
+    setRowsCleared(0)
+
+    const sweepRows()
+    
     const updateStage = prevStage => {
       // First flush the stage
       const newStage = prevStage.map(row =>
